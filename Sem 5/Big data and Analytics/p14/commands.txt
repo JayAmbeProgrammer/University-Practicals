@@ -1,0 +1,9 @@
+create database water;
+create table w_data
+>(ph DOUBLE, Hardness DOUBLE, Solids DOUBLE, Chloramines DOUBLE, Sulfate DOUBLE, Conductivity DOUBLE, Organic_carbon DOUBLE, Trihalomethanes DOUBLE, Turbidity DOUBLE, Potability DOUBLE)
+>LOAD DATA LOCAL INPATH '10000-Records.csv' INTO TABLE employee;
+
+
+hive>select count(*) from waterdata where ph>6.5 and ph<7;
+
+hive>select AVG(chloramines) from waterdata;
